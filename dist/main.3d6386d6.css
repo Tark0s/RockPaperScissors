@@ -1,5 +1,28 @@
+:root {
+  --gradient: linear-gradient(
+      to right,
+      #0756e9,
+      #9a27bd,
+      #3b1de9,
+      #f81f18
+  );
+}
+
 body {
-  background-color: pink;
+  background-image: var(--gradient);
+  background-size: 400%;
+  background-position: left;
+  transition: background-position 10s;
+  animation: backgroundAnimation 10s infinite alternate;
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
 
 /*# sourceMappingURL=/main.3d6386d6.css.map */
