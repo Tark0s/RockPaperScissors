@@ -2,10 +2,15 @@
   --gradient: linear-gradient(
       to right,
       #0756e9,
-      #9a27bd,
+      #7a2694,
       #3b1de9,
-      #f81f18
+      #902926
   );
+}
+
+* {
+  padding: 0;
+  margin: 0;
 }
 
 body {
@@ -13,7 +18,8 @@ body {
   background-size: 400%;
   background-position: left;
   transition: background-position 10s;
-  animation: backgroundAnimation 10s infinite alternate;
+  animation: backgroundAnimation 20s infinite alternate;
+  font-family: "Fredoka One", cursive;
 }
 
 @keyframes backgroundAnimation {
@@ -23,6 +29,86 @@ body {
   100% {
     background-position: right;
   }
+}
+header {
+  height: 10vh;
+  font-size: 64px;
+  color: #fff;
+  letter-spacing: 3px;
+  width: 100%;
+  text-align: center;
+}
+
+.panel {
+  min-height: 90vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: flex-start;
+}
+.panel .panel__right, .panel .panel__left {
+  width: 50%;
+  min-height: 60vh;
+  box-sizing: border-box;
+  margin: 100px;
+  background-color: transparent;
+}
+.panel__left {
+  border: 10px solid white;
+  border-radius: 20px;
+}
+.panel__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  text-align: center;
+  color: white;
+}
+.panel__right__weapons {
+  min-height: 30vh;
+  border: 10px solid rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.panel__right__weapons__item {
+  padding: 20px;
+  border-radius: 20px;
+  width: 20%;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.349);
+  border: 5px solid #d4d2d2;
+  transition: all 0.1s ease-in-out;
+}
+.panel__right__weapons__item img {
+  max-height: 10vh;
+}
+.panel__right__weapons__item:hover {
+  transform: scale(1.07);
+  background-color: rgba(100, 223, 52, 0.733);
+  border-color: #fff;
+}
+.panel__right__startbtn {
+  width: 15vw;
+  padding: 10px 0;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: #fff;
+  font-size: 30px;
+  border-width: 5px;
+  align-self: center;
+  transition: all 0.1s ease-in-out;
+  color: #fff;
+  cursor: pointer;
+}
+.panel__right__startbtn:focus {
+  border-style: none;
+}
+.panel__right__startbtn:hover {
+  transform: scale(1.07);
+  background-color: rgba(100, 223, 52, 0.733);
+  border-color: #fff;
 }
 
 /*# sourceMappingURL=/main.3d6386d6.css.map */
