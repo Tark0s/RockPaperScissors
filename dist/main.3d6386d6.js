@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/tarko_84e1waj/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/tarko_84e1waj/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\graphic\\aiRock.png":[["aiRock.870ec96b.png","graphic/aiRock.png"],"graphic/aiRock.png"],"./..\\graphic\\userRock.png":[["userRock.52f820ac.png","graphic/userRock.png"],"graphic/userRock.png"],"_css_loader":"C:/Users/tarko_84e1waj/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/css-loader.js"}],"C:/Users/tarko_84e1waj/AppData/Roaming/npm/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;

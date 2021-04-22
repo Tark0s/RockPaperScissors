@@ -30,6 +30,14 @@ body {
     background-position: right;
   }
 }
+@keyframes backgroundAnimationScale {
+  0% {
+    background-size: 50%;
+  }
+  100% {
+    background-size: 51%;
+  }
+}
 header {
   height: 10vh;
   font-size: 64px;
@@ -58,11 +66,20 @@ header {
   display: flex;
 }
 .panel__left__aiHand {
-  background-color: orange;
+  background-image: url("/aiRock.870ec96b.png");
+  background-size: 50%;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
   width: 50%;
+  animation: backgroundAnimationScale 0.2s infinite alternate;
 }
 .panel__left__userHand {
-  background-color: purple;
+  background-image: url("/userRock.52f820ac.png");
+  background-size: 50%;
+  background-position-x: center;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
   width: 50%;
 }
 .panel__right {
