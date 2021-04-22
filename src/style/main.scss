@@ -50,6 +50,20 @@ header{
         @extend%part;
         border: 10px solid white;
         border-radius: 20px;
+        display: flex;
+
+
+        
+        &__aiHand{    
+            background-color:orange;    
+            width: 50%;
+            
+        }
+        &__userHand{
+    
+            background-color: purple;
+            width: 50%;
+        }
     }
     &__right{
         @extend%part;
@@ -101,9 +115,6 @@ header{
             transition: all .1s ease-in-out;
             color: #fff;
             cursor: pointer;
-            &:focus{
-                border-style: none;
-            }
 
             &:hover{
                 transform: scale(1.07);

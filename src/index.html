@@ -13,22 +13,20 @@
 </head>
 <body>
     <header>
-       <span class="title__word" style="color: rgb(238, 167, 35);">Rock </span> 
-       <span class="title__word" style="color: rgb(235, 235, 235);">Paper </span> 
-       <span class="title__word" style="color: rgb(86, 142, 231);">Scissors </span> 
+        <span class="title__word" style="color: rgb(238, 167, 35);">Rock </span> 
+        <span class="title__word" style="color: rgb(235, 235, 235);">Paper </span> 
+        <span class="title__word" style="color: rgb(86, 142, 231);">Scissors </span> 
     </header>
     <div class="panel">
         <div class="panel__left">
-            <div class="board">
-                <span class="material-icons-outlined">
-                    check_circle_outline
-                    </span>
-            </div>
+                <div class="panel__left__aiHand">AI hand</div>
+                <div class="panel__left__userHand">User hand</div>
+           
         </div>
         <div class="panel__right"> 
             <h2 style="font-weight: 400;">Choose your weapon</h2>
             <div class="panel__right__weapons">
-               
+                
                 <div class="panel__right__weapons__item">
                     <img src="./image/rock.png" alt="rock">
                 </div>
@@ -39,10 +37,11 @@
                     <img src="./image/scissorsr.png" alt="Scissors">
                 </div>
             </div>
-            <button class="panel__right__startbtn">Start</button>
-
+            <button class="panel__right__startbtn" id="startBtn">Start</button>
+            
         </div>
         
     </div>
+    <script src="./script/index.js"></script>
 </body>
 </html>

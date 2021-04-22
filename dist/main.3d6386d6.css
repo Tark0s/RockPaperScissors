@@ -55,6 +55,15 @@ header {
 .panel__left {
   border: 10px solid white;
   border-radius: 20px;
+  display: flex;
+}
+.panel__left__aiHand {
+  background-color: orange;
+  width: 50%;
+}
+.panel__left__userHand {
+  background-color: purple;
+  width: 50%;
 }
 .panel__right {
   display: flex;
@@ -101,9 +110,6 @@ header {
   transition: all 0.1s ease-in-out;
   color: #fff;
   cursor: pointer;
-}
-.panel__right__startbtn:focus {
-  border-style: none;
 }
 .panel__right__startbtn:hover {
   transform: scale(1.07);
