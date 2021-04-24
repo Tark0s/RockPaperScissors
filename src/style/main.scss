@@ -20,14 +20,6 @@ body{
     animation: backgroundAnimation 20s infinite alternate;
     font-family: 'Fredoka One', cursive;
 }
-@keyframes backgroundAnimation{
-    0%{background-position: left;}
-    100%{background-position: right;}
-}
-@keyframes backgroundAnimationScale{
-    0%{background-size: 50%;}
-    100%{background-size: 51%;}
-}
 header{
     height: 10vh;
     font-size: 64px;
@@ -48,32 +40,46 @@ header{
         box-sizing: border-box;
         margin: 100px;
         background-color: transparent;
-    }
-    
+    } 
     &__left{
         @extend%part;
         border: 10px solid white;
         border-radius: 20px;
         display: flex;
+        height: 40vh;
+        overflow: hidden;
 
-
-        
         &__aiHand{    
-            background-image: url('../graphic/aiRock.png');
-            background-size:50%;
-            background-position-x: center;
-            background-position-y: bottom;
-            background-repeat: no-repeat;
             width: 50%;
-            animation: backgroundAnimationScale 0.2s infinite alternate;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            
+            & img{
+                height: 80%;
+            }
         }
         &__userHand{
-            background-image: url('../graphic/userRock.png');
-            background-size:50%;
-            background-position-x: center;
-            background-position-y: bottom;
-            background-repeat: no-repeat;
             width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            
+            
+            & img{
+                height: 80%;
+                animation: userHandShakeAnimation 1s  3  reverse;
+                transform: rotate(0deg);
+                // animation-name: handShakeAnimation;
+                // animation-iteration-count: 3;
+                // animation-duration: 3s
+
+                // &:hover{
+                //    transform: rotate(-30deg);
+                // }
+            }
         }
     }
     &__right{
@@ -135,4 +141,15 @@ header{
         }
     }
 
+}
+
+
+@keyframes backgroundAnimation{
+    0%{background-position: left;}
+    100%{background-position: right;}
+}
+@keyframes userHandShakeAnimation{
+    0%{transform: rotate(0deg);}
+    75%{transform: rotate(-30deg);}
+    100%{transform: rotate(0deg);}
 }
