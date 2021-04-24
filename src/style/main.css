@@ -1,0 +1,246 @@
+:root {
+  --gradient: linear-gradient(
+        to right,
+        #0756e9,
+        #7a2694,
+        #3b1de9,
+        #902926
+    );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: var(--gradient);
+  background-size: 400%;
+  background-position: left;
+  -webkit-transition: background-position 10s;
+  transition: background-position 10s;
+  -webkit-animation: backgroundAnimation 20s infinite alternate;
+          animation: backgroundAnimation 20s infinite alternate;
+  font-family: 'Fredoka One', cursive;
+}
+
+header {
+  height: 10vh;
+  font-size: 64px;
+  color: #fff;
+  letter-spacing: 3px;
+  width: 100%;
+  text-align: center;
+}
+
+.panel {
+  min-height: 90vh;
+  min-width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.panel .panel__left, .panel .panel__right {
+  width: 50%;
+  min-height: 60vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 100px;
+  background-color: transparent;
+}
+
+.panel__left {
+  border: 10px solid white;
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 40vh;
+  overflow: hidden;
+}
+
+.panel__left__aiHand {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.panel__left__aiHand img {
+  height: 80%;
+}
+
+.panel__left__userHand {
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.panel__left__userHand img {
+  height: 80%;
+  src: url("../graphic/aiRock.png");
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.panel__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  text-align: center;
+  color: white;
+}
+
+.panel__right__weapons {
+  min-height: 30vh;
+  border: 10px solid rgba(255, 255, 255, 0);
+  border-radius: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.panel__right__weapons__item {
+  padding: 20px;
+  border-radius: 20px;
+  width: 20%;
+  cursor: pointer;
+  background-color: rgba(128, 128, 128, 0.349);
+  border: 5px solid #d4d2d2;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+}
+
+.panel__right__weapons__item--active {
+  background-color: rgba(106, 255, 47, 0.733);
+}
+
+.panel__right__weapons__item--passive {
+  background-color: rgba(63, 63, 63, 0.733);
+}
+
+.panel__right__weapons__item img {
+  max-height: 10vh;
+}
+
+.panel__right__weapons__item:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  background-color: rgba(100, 223, 52, 0.733);
+  border-color: #fff;
+}
+
+.panel__right__startbtn {
+  width: 15vw;
+  padding: 10px 0;
+  background-color: transparent;
+  border-style: solid;
+  border-radius: 30px;
+  border-color: #fff;
+  font-size: 30px;
+  border-width: 5px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: all .1s ease-in-out;
+  transition: all .1s ease-in-out;
+  cursor: pointer;
+}
+
+.panel__right__startbtn:hover {
+  -webkit-transform: scale(1.07);
+          transform: scale(1.07);
+  background-color: rgba(100, 223, 52, 0.733);
+  border-color: #fff;
+}
+
+.panel__right__startbtn--not_ready {
+  color: #505050;
+  cursor: not-allowed;
+  display: none;
+}
+
+.panel__right__startbtn--not_ready:hover {
+  background-color: #6b6b6b;
+}
+
+@-webkit-keyframes backgroundAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes backgroundAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@-webkit-keyframes userHandShakeAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes userHandShakeAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(-30deg);
+            transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+/*# sourceMappingURL=main.css.map */

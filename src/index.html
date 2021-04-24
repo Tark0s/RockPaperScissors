@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/main.scss">
+    <link rel="stylesheet" href="./style/main.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <!-- Google fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
@@ -23,7 +23,7 @@
                     <img src="./graphic/aiRock.png" alt="robot hand" id="aiHand">
                 </div>
                 <div class="panel__left__userHand">
-                    <img src="./graphic/userScissors.png" alt="user hand" id="userHand">
+                    <img src="./graphic/userRock.png" alt="user hand" id="userHand">
                 </div>
            
         </div>
@@ -31,17 +31,19 @@
             <h2 style="font-weight: 400;">Choose your weapon</h2>
             <div class="panel__right__weapons">
                 
-                <div class="panel__right__weapons__item">
-                    <img src="./image/rock.png" alt="rock">
+
+
+                <div class="panel__right__weapons__item" id="rock" onclick="activeWeapon('rock')">
+                    <img src="./image/rock.png" alt="rock" >
                 </div>
-                <div class="panel__right__weapons__item">
-                    <img src="./image/paper.png" alt="paper">
+                <div class="panel__right__weapons__item" id="paper" onclick="activeWeapon('paper')">
+                    <img src="./image/paper.png" alt="paper" >
                 </div>
-                <div class="panel__right__weapons__item">
-                    <img src="./image/scissorsr.png" alt="Scissors">
+                <div class="panel__right__weapons__item" id="scissors" onclick="activeWeapon('scissors')">
+                    <img src="./image/scissorsr.png" alt="Scissors" >
                 </div>
             </div>
-            <button class="panel__right__startbtn" id="startBtn">Start</button>
+            <button class="panel__right__startbtn panel__right__startbtn--not_ready" id="startBtn">Start</button>
             
         </div>
         

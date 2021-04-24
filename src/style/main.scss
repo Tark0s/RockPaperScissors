@@ -58,6 +58,8 @@ header{
             
             & img{
                 height: 80%;
+
+
             }
         }
         &__userHand{
@@ -70,7 +72,8 @@ header{
             
             & img{
                 height: 80%;
-                animation: userHandShakeAnimation 1s  3  reverse;
+                src: url('../graphic/aiRock.png');
+                // animation: userHandShakeAnimation 1s  3  reverse;
                 transform: rotate(0deg);
                 // animation-name: handShakeAnimation;
                 // animation-iteration-count: 3;
@@ -108,6 +111,14 @@ header{
                 border: 5px solid rgb(212, 210, 210) ;
                 transition: all .1s ease-in-out;
 
+                &--active{
+                    background-color: rgba(106, 255, 47, 0.733);
+                }
+                &--passive{
+                    background-color: rgba(63, 63, 63, 0.733);
+                }
+
+
                 & img{
                     max-height: 10vh;
 
@@ -130,18 +141,29 @@ header{
             border-width: 5px;
             align-self: center;
             transition: all .1s ease-in-out;
-            color: #fff;
             cursor: pointer;
-
+            
             &:hover{
                 transform: scale(1.07);
                 background-color: rgba(100, 223, 52, 0.733);
                 border-color: #fff;
             }
+
+            &--not_ready{
+                color: rgb(80, 80, 80);
+                cursor: not-allowed;
+                display: none;
+                &:hover{
+                    background-color: rgb(107, 107, 107);
+                }
+            }
+
+            
         }
     }
 
 }
+
 
 
 @keyframes backgroundAnimation{
