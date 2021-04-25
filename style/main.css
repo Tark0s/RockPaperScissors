@@ -165,7 +165,7 @@ header {
 }
 
 .panel__right__weapons__item {
-  padding: 20px;
+  padding: 1vw;
   border-radius: 20px;
   width: 20%;
   cursor: pointer;
