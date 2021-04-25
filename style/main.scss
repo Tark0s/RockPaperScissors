@@ -7,7 +7,6 @@
         #902926
     );
 }
-
 *{
     padding: 0;
     margin: 0;
@@ -56,35 +55,42 @@ header{
             width: 50%;
             height: 100%;
             display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
             
+            & h3{
+                color: rgb(165, 165, 165);
+                font-weight: 100;
+                font-size: 30px;
+            }
             &--animation{
                 animation: aiHandShakeAnimation 1s  3  reverse;
             }
-
             & img{
                 height: 80%;
-
-
             }
         }
         &__userHand{
             width: 50%;
             height: 100%;
             display: flex;
-            justify-content: center;
-            align-items: flex-end;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
             
+            & h3{
+                color: rgb(238, 186, 44);
+                font-weight: 100;
+                font-size: 30px;
+            }
             &--animation{
                 animation: userHandShakeAnimation 1s  3  reverse;
             }
-            
             & img{
                 height: 80%;
                 src: url('../graphic/aiRock.png');
                 transform: rotate(0deg);
-                
             }
         }
     }
