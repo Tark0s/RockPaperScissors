@@ -42,36 +42,48 @@ function activeWeapon(weapon){
 }
 
 function whoWin(aiWeapon, userWeapon){
+
 }
+
 
 function startGame(){
 
     aiChoice = Math.floor(Math.random() * 3) + 1;
 
-    switch(aiChoice){
-        case 1 :
-            aiChoice = 'rock';
-            break;
-        case 2 :
-            aiChoice = 'paper';
-            aiHand.src = './graphic/aiPaper.png';
-            break;    
-        case 3 :
-            aiChoice = 'scissor';
-            aiHand.src = './graphic/aiScissors.png';
-            break;
-    }
-    switch(userChoice){
-        case 'rock' :
-            break;
-        case 'paper' :
-            userHand.src = './graphic/userPaper.png';
-            break;    
-        case 'scissors' :
-            userHand.src = './graphic/userScissors.png';
-            break;
-    }
+    userHand.classList.add('panel__left__userHand--animation');
+    aiHand.classList.add('panel__left__aiHand--animation');
 
+    setTimeout(
+        function setWeapons(){
+            switch(aiChoice){
+                case 1 :
+                    aiChoice = 'rock';
+                    break;
+                case 2 :
+                    aiChoice = 'paper';
+                    aiHand.src = './graphic/aiPaper.png';
+                    break;    
+                case 3 :
+                    aiChoice = 'scissor';
+                    aiHand.src = './graphic/aiScissors.png';
+                    break;
+            }
+            switch(userChoice){
+                case 'rock' :
+                    break;
+                case 'paper' :
+                    userHand.src = './graphic/userPaper.png';
+                    break;    
+                case 'scissors' :
+                    userHand.src = './graphic/userScissors.png';
+                    break;
+            }
+        },2150);
+
+        
+    
+
+    
 }
 
 startBtn.addEventListener('click', startGame);

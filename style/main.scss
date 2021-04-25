@@ -28,6 +28,9 @@ header{
     width: 100%;
     text-align: center;
 }
+.info{
+    display: none;
+}
 .panel{
     min-height: 90vh;
     min-width: 100vw;
@@ -56,6 +59,10 @@ header{
             justify-content: center;
             align-items: flex-end;
             
+            &--animation{
+                animation: aiHandShakeAnimation 1s  3  reverse;
+            }
+
             & img{
                 height: 80%;
 
@@ -69,19 +76,15 @@ header{
             justify-content: center;
             align-items: flex-end;
             
+            &--animation{
+                animation: userHandShakeAnimation 1s  3  reverse;
+            }
             
             & img{
                 height: 80%;
                 src: url('../graphic/aiRock.png');
-                // animation: userHandShakeAnimation 1s  3  reverse;
                 transform: rotate(0deg);
-                // animation-name: handShakeAnimation;
-                // animation-iteration-count: 3;
-                // animation-duration: 3s
-
-                // &:hover{
-                //    transform: rotate(-30deg);
-                // }
+                
             }
         }
     }
@@ -164,8 +167,6 @@ header{
 
 }
 
-
-
 @keyframes backgroundAnimation{
     0%{background-position: left;}
     100%{background-position: right;}
@@ -173,5 +174,10 @@ header{
 @keyframes userHandShakeAnimation{
     0%{transform: rotate(0deg);}
     75%{transform: rotate(-30deg);}
+    100%{transform: rotate(0deg);}
+}
+@keyframes aiHandShakeAnimation{
+    0%{transform: rotate(0deg);}
+    75%{transform: rotate(30deg);}
     100%{transform: rotate(0deg);}
 }

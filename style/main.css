@@ -33,6 +33,10 @@ header {
   text-align: center;
 }
 
+.info {
+  display: none;
+}
+
 .panel {
   min-height: 90vh;
   min-width: 100vw;
@@ -77,6 +81,10 @@ header {
           align-items: flex-end;
 }
 
+.panel__left__aiHand--animation {
+  animation: aiHandShakeAnimation 1s  3  reverse;
+}
+
 .panel__left__aiHand img {
   height: 80%;
 }
@@ -93,6 +101,10 @@ header {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+}
+
+.panel__left__userHand--animation {
+  animation: userHandShakeAnimation 1s  3  reverse;
 }
 
 .panel__left__userHand img {
@@ -237,6 +249,36 @@ header {
   75% {
     -webkit-transform: rotate(-30deg);
             transform: rotate(-30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@-webkit-keyframes aiHandShakeAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+}
+
+@keyframes aiHandShakeAnimation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  75% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
   }
   100% {
     -webkit-transform: rotate(0deg);
