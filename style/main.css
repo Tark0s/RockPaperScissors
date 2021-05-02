@@ -1,11 +1,5 @@
 :root {
-  --gradient: linear-gradient(
-        to right,
-        #0756e9,
-        #7a2694,
-        #3b1de9,
-        #902926
-    );
+  --gradient: linear-gradient(to right, #2c2c2c, #141618, #2b3a46, #352e2e);
 }
 
 * {
@@ -21,7 +15,7 @@ body {
   transition: background-position 10s;
   -webkit-animation: backgroundAnimation 20s infinite alternate;
           animation: backgroundAnimation 20s infinite alternate;
-  font-family: 'Fredoka One', cursive;
+  font-family: "Fredoka One", cursive;
 }
 
 header {
@@ -92,7 +86,7 @@ header {
 }
 
 .panel__left__aiHand--animation {
-  animation: aiHandShakeAnimation 1s  3  reverse;
+  animation: aiHandShakeAnimation 1s 3 reverse;
 }
 
 .panel__left__aiHand img {
@@ -124,7 +118,7 @@ header {
 }
 
 .panel__left__userHand--animation {
-  animation: userHandShakeAnimation 1s  3  reverse;
+  animation: userHandShakeAnimation 1s 3 reverse;
 }
 
 .panel__left__userHand img {
@@ -147,6 +141,7 @@ header {
           justify-content: flex-start;
   text-align: center;
   color: white;
+  font-size: 25px;
 }
 
 .panel__right__weapons {
@@ -171,8 +166,8 @@ header {
   cursor: pointer;
   background-color: rgba(128, 128, 128, 0.349);
   border: 5px solid #d4d2d2;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
 }
 
 .panel__right__weapons__item--active {
@@ -207,8 +202,8 @@ header {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  -webkit-transition: all .1s ease-in-out;
-  transition: all .1s ease-in-out;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
   cursor: pointer;
 }
 

@@ -1,190 +1,195 @@
-:root{
-    --gradient: linear-gradient(
-        to right,
-        #0756e9,
-        #7a2694,
-        #3b1de9,
-        #902926
-    );
+:root {
+  --gradient: linear-gradient(to right, #2c2c2c, #141618, #2b3a46, #352e2e);
 }
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
-body{
-    background-image: var(--gradient);
-    background-size: 400%;
-    background-position: left;
-    transition: background-position 10s;
-    animation: backgroundAnimation 20s infinite alternate;
-    font-family: 'Fredoka One', cursive;
+body {
+  background-image: var(--gradient);
+  background-size: 400%;
+  background-position: left;
+  transition: background-position 10s;
+  animation: backgroundAnimation 20s infinite alternate;
+  font-family: "Fredoka One", cursive;
 }
-header{
-    height: 10vh;
-    font-size: 64px;
-    color: #fff;
-    letter-spacing: 3px;
-    width: 100%;
-    text-align: center;
+header {
+  height: 10vh;
+  font-size: 64px;
+  color: #fff;
+  letter-spacing: 3px;
+  width: 100%;
+  text-align: center;
 }
-.info{
-    display: none;
+.info {
+  display: none;
 }
-.panel{
-    min-height: 90vh;
-    min-width: 100vw;
+.panel {
+  min-height: 90vh;
+  min-width: 100vw;
+  display: flex;
+  align-items: flex-start;
+
+  %part {
+    width: 50%;
+    min-height: 60vh;
+    box-sizing: border-box;
+    margin: 100px;
+    background-color: transparent;
+  }
+  &__left {
+    @extend%part;
+    border: 10px solid white;
+    border-radius: 20px;
     display: flex;
-    align-items: flex-start;
-    
-    %part{
-        width: 50%;
-        min-height: 60vh;
-        box-sizing: border-box;
-        margin: 100px;
-        background-color: transparent;
-    } 
-    &__left{
-        @extend%part;
-        border: 10px solid white;
+    height: 40vh;
+    overflow: hidden;
+
+    &__aiHand {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      & h3 {
+        color: rgb(165, 165, 165);
+        font-weight: 100;
+        font-size: 30px;
+      }
+      &--animation {
+        animation: aiHandShakeAnimation 1s 3 reverse;
+      }
+      & img {
+        height: 80%;
+      }
+    }
+    &__userHand {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      & h3 {
+        color: rgb(238, 186, 44);
+        font-weight: 100;
+        font-size: 30px;
+      }
+      &--animation {
+        animation: userHandShakeAnimation 1s 3 reverse;
+      }
+      & img {
+        height: 80%;
+        src: url("../graphic/aiRock.png");
+        transform: rotate(0deg);
+      }
+    }
+  }
+  &__right {
+    @extend%part;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+
+    &__weapons {
+      min-height: 30vh;
+      border: 10px solid rgba(255, 255, 255, 0);
+      border-radius: 20px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &__item {
+        padding: 1vw;
         border-radius: 20px;
-        display: flex;
-        height: 40vh;
-        overflow: hidden;
+        width: 20%;
+        cursor: pointer;
+        background-color: rgba(128, 128, 128, 0.349);
+        border: 5px solid rgb(212, 210, 210);
+        transition: all 0.1s ease-in-out;
 
-        &__aiHand{    
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            
-            & h3{
-                color: rgb(165, 165, 165);
-                font-weight: 100;
-                font-size: 30px;
-            }
-            &--animation{
-                animation: aiHandShakeAnimation 1s  3  reverse;
-            }
-            & img{
-                height: 80%;
-            }
+        &--active {
+          background-color: rgba(106, 255, 47, 0.733);
         }
-        &__userHand{
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            
-            & h3{
-                color: rgb(238, 186, 44);
-                font-weight: 100;
-                font-size: 30px;
-            }
-            &--animation{
-                animation: userHandShakeAnimation 1s  3  reverse;
-            }
-            & img{
-                height: 80%;
-                src: url('../graphic/aiRock.png');
-                transform: rotate(0deg);
-            }
+        &--passive {
+          background-color: rgba(63, 63, 63, 0.733);
         }
+
+        & img {
+          max-height: 10vh;
+        }
+        &:hover {
+          transform: scale(1.07);
+          background-color: rgba(100, 223, 52, 0.733);
+          border-color: #fff;
+        }
+      }
     }
-    &__right{
-        @extend%part;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        text-align: center;
-        color: white;
-        
-        &__weapons{ 
-            min-height: 30vh;
-            border: 10px solid rgba(255, 255, 255, 0);
-            border-radius: 20px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
+    &__startbtn {
+      width: 15vw;
+      padding: 10px 0;
+      background-color: transparent;
+      border-style: solid;
+      border-radius: 30px;
+      border-color: #fff;
+      color: rgb(218, 218, 218);
+      font-size: 30px;
+      border-width: 5px;
+      align-self: center;
+      transition: all 0.1s ease-in-out;
+      cursor: pointer;
 
-            
-            &__item{
-                padding: 1vw;
-                border-radius: 20px;
-                width: 20%;
-                cursor: pointer;
-                background-color: rgba(128, 128, 128, 0.349);
-                border: 5px solid rgb(212, 210, 210) ;
-                transition: all .1s ease-in-out;
+      &:hover {
+        transform: scale(1.07);
+        background-color: rgba(100, 223, 52, 0.733);
+        border-color: #fff;
+      }
 
-                &--active{
-                    background-color: rgba(106, 255, 47, 0.733);
-                }
-                &--passive{
-                    background-color: rgba(63, 63, 63, 0.733);
-                }
-
-
-                & img{
-                    max-height: 10vh;
-
-                }
-                &:hover{
-                    transform: scale(1.07);
-                    background-color: rgba(100, 223, 52, 0.733);
-                    border-color: #fff;
-                }
-            }
+      &--not_ready {
+        color: rgb(80, 80, 80);
+        cursor: not-allowed;
+        display: none;
+        &:hover {
+          background-color: rgb(107, 107, 107);
         }
-        &__startbtn{
-            width: 15vw;
-            padding: 10px 0 ;
-            background-color: transparent;
-            border-style: solid;
-            border-radius: 30px;
-            border-color: #fff;
-            color: rgb(218, 218, 218);
-            font-size: 30px;
-            border-width: 5px;
-            align-self: center;
-            transition: all .1s ease-in-out;
-            cursor: pointer;
-            
-            &:hover{
-                transform: scale(1.07);
-                background-color: rgba(100, 223, 52, 0.733);
-                border-color: #fff;
-            }
-
-            &--not_ready{
-                color: rgb(80, 80, 80);
-                cursor: not-allowed;
-                display: none;
-                &:hover{
-                    background-color: rgb(107, 107, 107);
-                }
-            }
-
-            
-        }
+      }
     }
-
+  }
 }
 
-@keyframes backgroundAnimation{
-    0%{background-position: left;}
-    100%{background-position: right;}
+@keyframes backgroundAnimation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
 }
-@keyframes userHandShakeAnimation{
-    0%{transform: rotate(0deg);}
-    75%{transform: rotate(-30deg);}
-    100%{transform: rotate(0deg);}
+@keyframes userHandShakeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
-@keyframes aiHandShakeAnimation{
-    0%{transform: rotate(0deg);}
-    75%{transform: rotate(30deg);}
-    100%{transform: rotate(0deg);}
+@keyframes aiHandShakeAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
