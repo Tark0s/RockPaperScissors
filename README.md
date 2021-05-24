@@ -1,3 +1,3 @@
 # RockPaperScissors
 
-App created by Java Script. 
+App created with Java Script. 
